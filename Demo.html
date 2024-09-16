@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+   
+    <style>
+        body{
+            background-image:url(' Space.jpg');
+        }
+        img{   
+           border-radius : 20%;
+            border: outset rgb(2, 19, 48);
+            border-width:5px;
+        }
+        .container{
+            justify-content: center;
+            align-items: center;
+            position:relative;
+            width:600px;
+            margin-left:auto;
+            margin-right:auto;  
+            margin-top:6% ;
+            padding:30px; 
+            
+        }
+        .container .btn{
+            position:absolute;
+            border-width:5px;
+            border-style: outset;
+            border-color: darkgoldenrod;
+            border-radius:120px;
+            bottom:25%;
+           margin-left:45%;
+           transform:translate(-50%, -50%);
+           background-color:rgb(170, 89, 8);
+           cursor:pointer;
+        }
+        .input-field1{
+            position:absolute;
+            justify-content: center;
+            align-items: center;
+            top:45%;
+            left:40%;
+            width:20%;
+            margin-bottom:10px;
+            border-radius:4px;
+            transform:translate(-50% , -50%);
+        }
+        .input-field{
+            position:absolute;
+            justify-content: center;
+            align-items: center;
+            top:50%;
+            left:40%;
+            width:20%;
+            margin-bottom:10px;
+            border-radius:4px;
+            transform:translate(-50% , -50%);
+        }
+        .input-field0{
+            position:absolute;
+            justify-content: center;
+            align-items: center;
+            top:55%;
+            left:40%;
+            width:20%;
+            margin-bottom:10px;
+            border-radius:4px;
+            transform:translate(-50% , -50%);
+        }
+        .img1{
+            color:azure;
+            text-align: center;
+            font-style:italic;
+            
+        }
+      .vendor{
+        position:absolute;
+            top:60%;
+            left:40%;
+            width:20%;
+            margin-bottom:10px;
+            border-radius:4px;
+            transform:translate(-50% , -50%);
+      }
+      video{
+        width:100%;
+        max-width:fit-content;
+        display:none;
+      }
+       
+        
+    </style>
+</head>
+<body>
+     <div class="container" > 
+    
+    <div class="container"> 
+
+   <h2 class="img1">You Want To Enjoy SpaceExp?</h2> 
+
+   <img src="Blast.jpj.jpg" class="container"
+    width="700px" heigth="500px"  >
+
+<form id="loginForm"> 
+    <input type="text" class="input-field1" placeholder="Username" >
+    <input type="password" class="input-field"placeholder="Password">
+    <input type="Address" class="input-field0" placeholder="Address">
+    
+    <select class="vendor" name="usertype">
+        <option value="Vendor">No</option>
+        <option value="Vendor">Yes</option>
+    </select>
+</div>  
+    <button class="btn">Submit</button>
+</form>
+<video id="video" controls>
+    <source src="SpaceEdit.mp4.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event){
+        event.preventDefault();
+        const video = document.getElementById('video');
+        video.style.display = 'block';
+        video.play();
+    });
+    document.getElementById('video').addEventListener('ended',function(){
+        this.style.display ='none';
+    });
+</script>
+     
+    
+</div>
+</div>
+</body>
+</html>
+ 
